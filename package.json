@@ -1,0 +1,66 @@
+{
+  "name": "magpie-token-receipt",
+  "version": "0.1.0",
+  "description": "A magpie page that prints your daily, weekly, monthly, last-7/30/90-day or all-time token usage and cost as a tactile receipt, with PNG export.",
+  "files": [
+    "page",
+    "README.md",
+    "README.zh.md",
+    "README.ja.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "licenses"
+  ],
+  "keywords": [
+    "magpie",
+    "magpie-page",
+    "magpie-plugin",
+    "usage",
+    "tokens",
+    "cost",
+    "receipt",
+    "png"
+  ],
+  "license": "MIT",
+  "author": "maxlee",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxlee/magpie-token-receipt.git"
+  },
+  "homepage": "https://github.com/maxlee/magpie-token-receipt#readme",
+  "bugs": {
+    "url": "https://github.com/maxlee/magpie-token-receipt/issues"
+  },
+  "engines": {
+    "node": ">=22",
+    "magpie": ">=0.1.3427"
+  },
+  "magpie": {
+    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxYzFjMjEiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMiAxMikgc2NhbGUoMS42NjY3KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEuNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNNi41IDhWNC41aDExVjgiLz48cmVjdCB4PSIzIiB5PSI4IiB3aWR0aD0iMTgiIGhlaWdodD0iOSIgcng9IjIuMiIvPjxwYXRoIGQ9Ik03LjUgMTd2Mi41aDlWMTciLz48cGF0aCBkPSJNNy41IDEyLjVoOSIvPjwvZz48L3N2Zz4K",
+    "name": "Token Receipt",
+    "summary": {
+      "en": "Print your token usage and cost as a tactile receipt: day, week, month or the last 7/30 days, saved as a PNG.",
+      "zh": "把 token 用量和费用打印成一张有手感的小票：日、周、月或最近 7/30 天，可保存 PNG。"
+    },
+    "page": {
+      "title": "Token receipt",
+      "titles": {
+        "zh": "Token 账单",
+        "zh-TW": "Token 帳單",
+        "ja": "トークン明細"
+      },
+      "file": "page/index.html",
+      "icon": "page/icon.svg"
+    },
+    "permissions": [
+      "usage:day"
+    ]
+  },
+  "scripts": {
+    "check": "for f in page/*.js tests/*.js; do node --check \"$f\" || exit 1; done",
+    "test": "node --test tests/"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
